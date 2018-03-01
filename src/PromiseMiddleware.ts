@@ -7,6 +7,18 @@ export const suffixes = ['LOADING', 'SUCCESS', 'FAILURE']
 /**
  * Redux middleware to handle async actions in @sensenet/redux
  * @param repository {Repository} resporitory of the application.
+ * Usage example:
+ *
+ * ```
+ * import { Repository } from '@sensenet/client-core'
+ * import { promiseMiddleware } from '@sensenet/redux-promise-middleware'
+ *
+ * const repository = new Repository({ repositoryUrl: 'https://mySensenetSite.com' }, async () => ({ ok: true } as any))
+ * const store = createStore(
+ *  rootReducer,
+ *  persistedState,
+ *  applyMiddleware([promiseMiddleware(repository)]),
+ * )
  */
 export const promiseMiddleware = (repository) => {
     return (ref) => {
