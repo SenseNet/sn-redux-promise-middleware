@@ -1,6 +1,6 @@
 {
   "name": "@sensenet/redux-promise-middleware",
-  "version": "1.0.0",
+  "version": "2.0.0-development.1",
   "description": "Redux middleware for async sensenet functions",
   "main": "dist/index.js",
   "scripts": {
@@ -8,9 +8,6 @@
     "commit": "git-cz",
     "pretest": "tslint --project tsconfig.test.json && rimraf temp && tsc -p tsconfig.test.json",
     "test": "rimraf coverage && nyc mocha -p tsconfig.test.json ./temp/test/index.js",
-    "check-coverage": "istanbul check-coverage ",
-    "report-coverage": "cat ./coverage/lcov.info | ./node_modules/.bin/codecov",
-    "semantic-release": "semantic-release pre && semantic-release post",
     "prebuild": "tslint --project tsconfig.json",
     "build": "rimraf dist && tsc -p tsconfig.json",
     "prepublishOnly": "npm run test && npm run build",
@@ -67,7 +64,6 @@
     "@types/chai": "^4.1.2",
     "@types/mocha": "^5.2.2",
     "chai": "^4.1.2",
-    "codecov": "^3.0.0",
     "mocha": "^5.0.0",
     "nyc": "^12.0.2",
     "redux": "^4.0.0",
