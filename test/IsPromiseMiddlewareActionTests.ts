@@ -7,7 +7,7 @@ import { isPromiseMiddlewareAction, PromiseMiddlewareAction } from '../src'
  */
 export const isPromiseMiddlewareActionTest: Mocha.Suite = describe('PromiseMiddleware', () => {
     it('Should return true for PromiseMiddlewareActions', () => {
-        const action: PromiseMiddlewareAction<any, any, any> = {
+        const action: PromiseMiddlewareAction<any, any> = {
             type: 'EXAMPLE_ACTION',
             payload: () => Promise.resolve(false),
         }

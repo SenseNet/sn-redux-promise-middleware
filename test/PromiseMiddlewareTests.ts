@@ -21,7 +21,7 @@ export const promiseMiddlewareTest: Mocha.Suite = describe('PromiseMiddleware', 
             payload: async (api) => {
                 api.call()
             },
-        } as PromiseMiddlewareAction<typeof customApi, any, any>)
+        } as PromiseMiddlewareAction<typeof customApi, any>)
     })
 
     it('Success action should be dispatched', (done: MochaDone) => {
@@ -37,7 +37,7 @@ export const promiseMiddlewareTest: Mocha.Suite = describe('PromiseMiddleware', 
             payload: async (api) => {
                 return api.call()
             },
-        } as PromiseMiddlewareAction<typeof customApi, any, any>)
+        } as PromiseMiddlewareAction<typeof customApi, any>)
 
         let subscription!: Unsubscribe
         subscription = store.subscribe(() => {
@@ -61,7 +61,7 @@ export const promiseMiddlewareTest: Mocha.Suite = describe('PromiseMiddleware', 
             payload: async () => {
                 throw Error()
             },
-        } as PromiseMiddlewareAction<undefined, any, any>)
+        } as PromiseMiddlewareAction<undefined, any>)
 
         let subscription!: Unsubscribe
         subscription = store.subscribe(() => {
