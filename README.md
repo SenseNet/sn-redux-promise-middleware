@@ -1,5 +1,9 @@
 # sn-redux-promise-middleware
 
+------
+### This package is not under active development. You can find our latest packages in the [sensenset/sn-client](https://github.com/sensenet/sn-client) monorepo.
+------
+
 [![Greenkeeper badge](https://badges.greenkeeper.io/SenseNet/sn-redux-promise-middleware.svg)](https://greenkeeper.io/)
 
 [![Build Status](https://travis-ci.org/SenseNet/sn-redux-promise-middleware.svg?branch=master)](https://travis-ci.org/SenseNet/sn-redux-promise-middleware)
